@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha test"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/emlandi/data_structures_and_algorithms#readme",
   "devDependencies": {
     "chai": "^3.4.0",
+    "gulp": "^3.9.0",
     "gulp-jshint": "^1.12.0",
     "gulp-mocha": "^2.1.3",
     "mocha": "^2.3.3"
