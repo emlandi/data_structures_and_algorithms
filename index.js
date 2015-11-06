@@ -1,9 +1,7 @@
-//re-implement: Push, Pop, Shift, and Unshift for Array.prototype, without using any library functions. Also add some Mocha tests to verify correctness.
-
+//PART 1
 var array = ["rose", "iris", "peony", "daisy"];
-console.log(array);
 
-//Remove and return the last element of the array
+//Remove and return the last element of the array.
 function pop (array) {
   var lastItem = array[array.length-1];
   console.log(lastItem);
@@ -14,7 +12,7 @@ function pop (array) {
   return lastItem;
 }
 
-//Add item to the end of the array
+//Add item to the end of the array.
 function push (array, item) {
   array[array.length] = item;
   console.log(array);
@@ -44,7 +42,43 @@ function unshift (array, item) {
   console.log(array);
 }
 
-pop(array);
-push(array, 'sunflower');
-shift(array);
-unshift(array, 'marigold');
+// pop(array);
+// push(array, 'sunflower');
+// shift(array);
+// unshift(array, 'marigold');
+
+//PART 2
+var array2 = [1, 1, 2, 3, 4, 5, 5];
+var array3 = ['hi', 'hi', 'wow', 'cool', 'cool', 'bye'];
+
+//Copy array with duplicates removed.
+function unique(array) {
+  var seen = {};
+  var arrayCopy = [];
+  var j = 0;
+
+  for(var i = 0; i < array.length; i++) {
+    var item = array[i];
+    if(seen[item] !== 1) {
+      seen[item] = 1;
+      arrayCopy[j++] = item;
+    }
+  }
+  console.log(array);
+  console.log(arrayCopy);
+  return arrayCopy;
+}
+
+// unique(array2);
+// unique(array3);
+
+
+
+
+
+
+
+
+
+
+
